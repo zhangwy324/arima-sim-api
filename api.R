@@ -12,6 +12,7 @@ function(numbers){
 #* Sarima simulator
 #* @post /sarima
 function(req){
+  print("POST /sarima")
   body = req$body
   ar = body$ar
   ma = body$ma
