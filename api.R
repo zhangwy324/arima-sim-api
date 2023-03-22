@@ -37,6 +37,7 @@ function(req){
   }
   set.seed(seed)
   ts = sarima.sim(ar = ar, ma = ma, d = d, sar = sar, sma = sma, D = D, S = S, n = n, burnin = burnin)
+  print(as.numeric(ts))
   list(data = as.numeric(ts), mean=mean(ts), var=var(ts))
 }
 
