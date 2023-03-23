@@ -11,7 +11,12 @@ function(numbers){
 
 #* Sarima simulator
 #* @post /sarima
+<<<<<<< HEAD
 function(req, res){
+=======
+function(req){
+  print("POST /sarima")
+>>>>>>> 83ad61441430d7b29ee6d582b75ea0536d8afad0
   body = req$body
   print(body)
   ar = body$ar
@@ -37,6 +42,7 @@ function(req, res){
     n = 100
   }
   set.seed(seed)
+<<<<<<< HEAD
   
   tryCatch(
     expr = {
@@ -50,6 +56,11 @@ function(req, res){
   
   # ts = sarima.sim(ar = ar, ma = ma, d = d, sar = sar, sma = sma, D = D, S = S, n = n, burnin = burnin)
   # list(data = as.numeric(ts), mean=mean(ts), var=var(ts))
+=======
+  ts = sarima.sim(ar = ar, ma = ma, d = d, sar = sar, sma = sma, D = D, S = S, n = n, burnin = burnin)
+  print(as.numeric(ts))
+  list(data = as.numeric(ts), mean=mean(ts), var=var(ts))
+>>>>>>> 83ad61441430d7b29ee6d582b75ea0536d8afad0
 }
 
 
