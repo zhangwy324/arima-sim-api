@@ -13,7 +13,6 @@ function(numbers){
 #* @post /sarima
 function(req){
   body = req$body
-  print(body)
   ar = body$ar
   ma = body$ma
   d = body$d
